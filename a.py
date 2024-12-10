@@ -21,7 +21,8 @@ no_of_changes_done_yet = int(changelogreader.readline())+1
 
 for i in range(0,no_to_be_done):
     os.system(f"git remote add origin {dest_repo}")
-    logwriter.write(f"change no:{no_of_changes_done_yet} done on {datetime.datetime.now()}\n")
+    with open("log.txt","a+") as lgwriter:
+        lgwriter.write(f"change no:{no_of_changes_done_yet} done on {datetime.datetime.now()}\n")
     no_of_changes_done_yet = no_of_changes_done_yet+1
     os.system("git add .")
     os.system(f"git commit -m \"change no {no_of_changes_done_yet}\"")

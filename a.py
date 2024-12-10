@@ -26,7 +26,7 @@ for i in range(0,no_to_be_done):
     no_of_changes_done_yet = no_of_changes_done_yet+1
     os.system("git add .")
     os.system(f"git commit -m \"change no {no_of_changes_done_yet}\"")
-    os.system("git push master origin")
+    os.system("git push origin master")
 
 with open("changes.txt","w") as temp:
     temp.write(f"{no_of_changes_done_yet-1}")

@@ -15,7 +15,6 @@ if not os.stat("log.txt").st_size:
     os.system(f"git remote add origin {repo}")
 
 changelogreader = open("changes.txt",'r+')
-no_to_be_done = int(input("Enter no of commits: "))
 dest_repo = logreader.readlines()[1]
 no_of_changes_done_yet = int(changelogreader.readline())
 

@@ -30,6 +30,7 @@ with open("changes.txt","w") as temp:
     
 os.system("git add .")
 os.system(f"git commit -m \"change no {no_of_changes_done_yet}\"")
+os.system("git status")
 os.system("git push origin master")
 
     

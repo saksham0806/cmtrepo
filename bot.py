@@ -23,6 +23,8 @@ with open("log.txt","a+") as lgwriter:
     lgwriter.write(f"change no:{no_of_changes_done_yet} done on {datetime.datetime.now()}\n")
 no_of_changes_done_yet = no_of_changes_done_yet+1
 
+os.system("git status")
+
 with open("changes.txt","w") as temp:
     temp.write(f"{no_of_changes_done_yet}")
     
